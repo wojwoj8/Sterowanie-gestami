@@ -40,22 +40,44 @@ def check_gesture():
             print('DOWN')
             pyautogui.press('volumedown')
             gesture_detected = True
+
         elif className == 'thumbs up':
             print('UP')
             pyautogui.press('volumeup')
             gesture_detected = True
+
         elif className == 'stop':
             pyautogui.screenshot('my_screenshot.png')
             gesture_detected = True
+
         elif className == 'rock':
             pyautogui.hotkey('ctrl', 'shift', 'esc')
             gesture_detected = True
+
         elif className == 'okay':
             pyautogui.hotkey('winleft', 'shift', 's')
             gesture_detected = True
+
         elif className == 'fist':
-            pyautogui.hotkey('fn', 'f5')
+            pyautogui.press('volumemute')
             gesture_detected = True
+
+        elif className == 'peace':
+            pyautogui.hotkey('alt', 'tab')
+            gesture_detected = True
+
+        # elif className == 'smile':
+        #     pyautogui.hotkey('alt', 'tab')
+        #     gesture_detected = True
+
+        # elif className == 'call me':
+        #     pyautogui.hotkey('alt', 'tab')
+        #     gesture_detected = True
+
+        # elif className == 'live long':
+        #     pyautogui.hotkey('alt', 'tab')
+        #     gesture_detected = True
+
         else:
 
             gesture_detected = False
