@@ -66,20 +66,18 @@ def check_gesture():
             pyautogui.hotkey('alt', 'tab')
             gesture_detected = True
 
-        # elif className == 'smile':
-        #     pyautogui.hotkey('alt', 'tab')
-        #     gesture_detected = True
+        elif className == 'call me':
+            pyautogui.hotkey('win', 'r')
+            pyautogui.write('notepad')
+            pyautogui.hotkey('enter')
+            pyautogui.write('Hello World!')
+            gesture_detected = True
 
-        # elif className == 'call me':
-        #     pyautogui.hotkey('alt', 'tab')
-        #     gesture_detected = True
-
-        # elif className == 'live long':
-        #     pyautogui.hotkey('alt', 'tab')
-        #     gesture_detected = True
+        elif className == 'live long':
+            pyautogui.hotkey('win', 'e')
+            gesture_detected = True
 
         else:
-
             gesture_detected = False
 
         time.sleep(1)
@@ -133,7 +131,7 @@ while True:
     # Perform action based on detected gesture
     if gesture_detected:
 
-        print('dziala')
+        # print('dziala')
         gesture_detected = False
         className = ''
 
