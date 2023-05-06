@@ -27,10 +27,8 @@ className = ''
 # Initialize the webcam
 cap = cv2.VideoCapture(0)
 
-# TEST
 
 # Define function to check gesture
-
 
 def check_gesture():
     global gesture_detected, className
@@ -70,11 +68,15 @@ def check_gesture():
             pyautogui.hotkey('win', 'r')
             pyautogui.write('notepad')
             pyautogui.hotkey('enter')
-            pyautogui.write('Hello World!')
+            pyautogui.write('Rozpoznawanie Gestoqqw')
             gesture_detected = True
 
         elif className == 'live long':
             pyautogui.hotkey('win', 'e')
+            gesture_detected = True
+
+        elif className == 'smile':
+            pyautogui.hotkey('win', 'd')
             gesture_detected = True
 
         else:
@@ -106,7 +108,7 @@ while True:
         landmarks = []
         for handslms in result.multi_hand_landmarks:
             for lm in handslms.landmark:
-                # print(id, lm)
+
                 lmx = int(lm.x * x)
                 lmy = int(lm.y * y)
 
@@ -131,7 +133,6 @@ while True:
     # Perform action based on detected gesture
     if gesture_detected:
 
-        # print('dziala')
         gesture_detected = False
         className = ''
 
