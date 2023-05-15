@@ -68,7 +68,7 @@ def check_gesture():
             pyautogui.hotkey('win', 'r')
             pyautogui.write('notepad')
             pyautogui.hotkey('enter')
-            pyautogui.write('Rozpoznawanie Gestoqqw')
+            pyautogui.write('Rozpoznawanie Gestow')
             gesture_detected = True
 
         elif className == 'live long':
